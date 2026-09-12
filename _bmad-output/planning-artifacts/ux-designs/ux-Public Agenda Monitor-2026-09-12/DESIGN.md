@@ -34,6 +34,8 @@ Use the system sans-serif stack. Event titles are the strongest row text; compac
 
 The primary desktop surface is a wide, horizontally ordered table. Date and optional time lead each row. At narrow widths the table scrolls horizontally rather than dropping facts; the first draft prioritizes desktop/laptop use.
 
+Mockup reference: [agenda-design-preview.html](mockups/agenda-design-preview.html).
+
 ## Elevation & Depth
 
 Use a single restrained application shell with a soft shadow. Event rows use tonal fills and compact radii instead of stacked cards.

@@ -1,0 +1,46 @@
+<div id="pam-preview" aria-label="Public Agenda Monitor – App-Ansicht">
+  <style>
+    #pam-preview { --ink:#182b33; --muted:#5a6d75; --blue:#1f6075; --blue-soft:#dcecf0; --orange-soft:#fff0e3; --line:#d6e1e5; --page:#f4f7f8; --white:#fff; color:var(--ink); background:var(--page); padding:24px; font-family:Inter,ui-sans-serif,system-ui,sans-serif; box-sizing:border-box; }
+    #pam-preview * { box-sizing:border-box; } .pam-shell { max-width:1180px; margin:auto; overflow:hidden; background:var(--white); border:1px solid var(--line); border-radius:14px; box-shadow:0 16px 42px rgba(24,43,51,.12); }
+    .pam-top { display:flex; gap:18px; align-items:center; padding:18px 22px; border-bottom:1px solid var(--line); } .pam-brand { font-size:19px; font-weight:700; white-space:nowrap; } .pam-role { display:flex; gap:6px; margin-left:auto; } button { font:inherit; cursor:pointer; }
+    .pam-role button { padding:8px 11px; border:0; border-radius:7px; background:transparent; color:var(--muted); font-size:13px; } .pam-role button[aria-pressed="true"] { color:#164c5c; background:#e8f1f3; font-weight:700; }
+    .pam-action,.pam-release { border:0; border-radius:8px; color:#fff; background:var(--blue); font-weight:700; } .pam-action { padding:10px 14px; font-size:14px; } .pam-main { padding:22px; } .pam-titleline { display:flex; justify-content:space-between; gap:18px; align-items:end; } h1 { margin:0; font-size:24px; letter-spacing:-.03em; } .pam-titleline p,.pam-window { margin:5px 0 0; color:var(--muted); font-size:13px; } .pam-window { text-align:right; }
+    .pam-source-status { margin:18px 0 14px; padding:9px 11px; color:var(--muted); background:#f7fafb; border:1px solid var(--line); border-radius:8px; font-size:12px; } .pam-dot { display:inline-block; width:8px; height:8px; margin-right:7px; background:#28734f; border-radius:50%; }
+    .pam-table-wrap { overflow-x:auto; } .pam-table { width:100%; min-width:1100px; border-collapse:separate; border-spacing:0 7px; text-align:left; } th { padding:0 8px 6px; color:var(--muted); font-size:10px; letter-spacing:.05em; text-transform:uppercase; white-space:nowrap; } td { padding:10px 8px; vertical-align:top; font-size:12px; background:var(--blue-soft); } tr.is-new td { background:var(--orange-soft); } td:first-child { border-radius:9px 0 0 9px; } td:last-child { border-radius:0 9px 9px 0; } .pam-title { display:block; min-width:190px; color:var(--ink); font-size:14px; font-weight:700; } .pam-detail { display:block; margin-top:3px; color:#47606a; } .pam-topic { min-width:125px; } .pam-type { min-width:115px; } .pam-source { min-width:125px; } .pam-link { color:#18566a; font-weight:700; text-decoration:none; white-space:nowrap; } .pam-score { min-width:78px; font-weight:700; } .pam-status { min-width:95px; } .pam-release { padding:7px 10px; font-size:12px; white-space:nowrap; } .pam-release[hidden] { display:none; }
+    .pam-note { margin:14px 0 0; color:var(--muted); font-size:12px; } @media (max-width:720px) { #pam-preview { padding:10px; } .pam-top,.pam-titleline { align-items:flex-start; flex-wrap:wrap; } .pam-role { order:3; width:100%; margin-left:0; } .pam-window { text-align:left; } }
+  </style>
+  <main class="pam-shell">
+    <header class="pam-top">
+      <div class="pam-brand">Public Agenda Monitor</div>
+      <div class="pam-role" role="group" aria-label="App-Zugang auswählen">
+        <button type="button" data-role="specialist" aria-pressed="true">Information Specialists</button>
+        <button type="button" data-role="editorial" aria-pressed="false">Redaktion</button>
+      </div>
+      <button class="pam-action" type="button">Quellen abrufen</button>
+    </header>
+    <section class="pam-main" aria-labelledby="pam-heading">
+      <div class="pam-titleline"><div><h1 id="pam-heading">Prüfwarteschlange für Information Specialists</h1><p id="pam-subtitle">Neue Ereignisse prüfen und für die Agenda freigeben.</p></div><div class="pam-window">12.–25. Sept.<br>14 Kalendertage</div></div>
+      <div class="pam-source-status"><span class="pam-dot"></span>3 Quellen zuletzt erfolgreich abgerufen</div>
+      <div class="pam-table-wrap"><table class="pam-table"><thead><tr><th>Datum</th><th>Uhrzeit</th><th>Ereignistitel</th><th>Überthema</th><th>Ereignistyp</th><th>Quellenname</th><th>Quellenlink</th><th>Relevanz</th><th>Status</th><th class="pam-approval-head">Freigabe</th></tr></thead><tbody>
+        <tr class="is-new"><td>15. Sept.</td><td>—</td><td><span class="pam-title">Neue UN-Women-Veröffentlichung</span><span class="pam-detail">Kurze Beschreibung des Ereignisses</span></td><td class="pam-topic">Gleichstellung</td><td class="pam-type">Veröffentlichung</td><td class="pam-source">UN Women</td><td><a class="pam-link" href="#quelle-1">Quelle öffnen ↗</a></td><td class="pam-score">4 / 5</td><td class="pam-status">Neu</td><td class="pam-approval"><button class="pam-release" type="button">Freigeben</button></td></tr>
+        <tr><td>16. Sept.</td><td>10:00</td><td><span class="pam-title">Termin im Wochenüberblick</span><span class="pam-detail">Öffentliche Verhandlung</span></td><td class="pam-topic">Rechtspolitik</td><td class="pam-type">Gerichtstermin</td><td class="pam-source">Bundesverfassungsgericht</td><td><a class="pam-link" href="#quelle-2">Quelle öffnen ↗</a></td><td class="pam-score">3 / 5</td><td class="pam-status">Prüfung nötig</td><td class="pam-approval"><button class="pam-release" type="button">Freigeben</button></td></tr>
+        <tr><td>18. Sept.</td><td>14:30</td><td><span class="pam-title">Termin des Bundespräsidenten</span><span class="pam-detail">Öffentlicher Termin</span></td><td class="pam-topic">Staatsbesuch</td><td class="pam-type">Kalendertermin</td><td class="pam-source">Bundespräsident</td><td><a class="pam-link" href="#quelle-3">Quelle öffnen ↗</a></td><td class="pam-score">4 / 5</td><td class="pam-status">Vorgeschlagen</td><td class="pam-approval"><button class="pam-release" type="button">Freigeben</button></td></tr>
+      </tbody></table></div>
+      <p class="pam-note">Kommentar ist bewusst nicht Bestandteil dieses ersten Entwurfs.</p>
+    </section>
+  </main>
+  <script>
+    (function () {
+      const root = document.getElementById('pam-preview');
+      const heading = root.querySelector('#pam-heading'); const subtitle = root.querySelector('#pam-subtitle');
+      const approvalHeads = root.querySelectorAll('.pam-approval-head'); const approvalCells = root.querySelectorAll('.pam-approval');
+      root.querySelectorAll('[data-role]').forEach((button) => button.addEventListener('click', () => {
+        const editorial = button.dataset.role === 'editorial';
+        root.querySelectorAll('[data-role]').forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+        heading.textContent = editorial ? 'Agenda-Ansicht für die Redaktion' : 'Prüfwarteschlange für Information Specialists';
+        subtitle.textContent = editorial ? 'Freigegebene und vorgeschlagene Ereignisse im Überblick.' : 'Neue Ereignisse prüfen und für die Agenda freigeben.';
+        approvalHeads.forEach((cell) => cell.hidden = editorial); approvalCells.forEach((cell) => cell.hidden = editorial);
+      }));
+    }());
+  </script>
+</div>

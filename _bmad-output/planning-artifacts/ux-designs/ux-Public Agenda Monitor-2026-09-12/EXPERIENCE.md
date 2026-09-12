@@ -26,6 +26,8 @@ Responsive browser-based internal hackathon MVP, optimized for desktop/laptop re
 
 Both role entries land on the same horizontal-table structure. The specialist heading is “Prüfwarteschlange für Information Specialists”; the editorial heading is “Agenda-Ansicht für die Redaktion”. Only the specialist view includes the final **Freigeben** column.
 
+Mockup reference: [agenda-design-preview.html](mockups/agenda-design-preview.html).
+
 ## Voice and Tone
 
 Use concise, factual German microcopy: “Quellen abrufen”, “Quelle öffnen”, “Prüfung nötig”, “Freigeben”. Avoid celebratory language and ambiguous system jargon.
